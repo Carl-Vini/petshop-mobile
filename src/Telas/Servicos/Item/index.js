@@ -57,7 +57,7 @@ export default function Item({ nome, preco, descricao }) {
                         }).format(total)}</Text>
                     </View>
                 </View>
-                <Botao valor="Adicionar" acao={() => { }} />
+                <Botao valor="Adicionar ao carrinho" acao={() => { }} />
             </View>
             }
             <View style={estilos.divisor} />
