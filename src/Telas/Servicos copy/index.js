@@ -4,6 +4,7 @@ import { FlatList } from "react-native";
 import Item from "./Item";
 
 import TelaPadrao from "../../componentes/TelaPadrao/Index";
+import StatusCarrinho from "../../componentes/StatusCarrinho";
 
 const servicos = [
     {
@@ -30,7 +31,12 @@ const servicos = [
 ]
 
 export default function Carrinho() {
+   const total = servicos.reduce((soma, {preco, quantidade}) => {
+    return soma + (preco * quantidade)
+   }, 0)
+
     return <TelaPadrao>
+        <StatusCarrinho total={total} />
             <FlatList
                 data={servicos}
                 removeClippedSubviews={false}
