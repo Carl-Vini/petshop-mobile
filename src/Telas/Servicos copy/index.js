@@ -35,7 +35,7 @@ export default function Carrinho() {
     return soma + (preco * quantidade)
    }, 0)
 
-    return <TelaPadrao>
+    return <>
         <StatusCarrinho total={total} />
             <FlatList
                 data={servicos}
@@ -43,7 +43,7 @@ export default function Carrinho() {
                 renderItem={({ item }) => <Item {...item} />}
                 keyExtractor={({ id }) => String(id)}
             />
-        </TelaPadrao>
+        </>
     
 
 }
